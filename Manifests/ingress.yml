@@ -1,0 +1,33 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: serviceapp-ingress
+  namespace: guardian-ns
+  annotations:
+    #alb.ingress.kubernetes.io/subnets: subnet-07cb0ba72da43f3c4, 
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}]'
+    #alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:11111111:certificate/c4c69a61-bf66-449d-bf47-25033b1703d5
+    alb.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: alb
+  rules:
+    - http:
+        paths:
+          - path: /get_people
+            pathType: Prefix
+            backend:
+              service:
+                name: get-svc
+                port:
+                  number: 80
+          - path: /add_person
+            pathType: Prefix
+            backend: 
+              service: 
+                name: post-svc
+                port: 
+                  number: 80
+

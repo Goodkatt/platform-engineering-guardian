@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: post-deployment
+  namespace: guardian-ns
+  labels: 
+    app: guardian-post
+spec:
+  #replicas: 1
+  selector:
+    matchLabels:
+      app: guardian-post
+  template:
+    metadata:
+      labels:
+        app: guardian-post
+    spec:
+      serviceAccountName: eks-secrets-sa
+      containers:
+      - image: 721699489018.dkr.ecr.eu-west-1.amazonaws.com/microservice-post:latest
+        name: post-ms
+        ports:
+        - containerPort: 80
+        resources: 
+          limits: 
+            cpu: 500m
+          requests: 
+            cpu: 200m
+        volumeMounts:
+          - name:  secrets-store-inline
+            mountPath:  "/mnt/secrets-store"
+            readOnly: true
+      volumes:
+        - name:  secrets-store-inline
+          csi: 
+            driver: secrets-store.csi.k8s.io
+            readOnly: true
+            volumeAttributes: 
+              secretProviderClass: "aws-secrets"
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name:  post-svc
+  namespace: guardian-ns
+spec:
+  selector:
+    app:  guardian-post
+  ports:
+  - protocol: TCP
+    port:  80
+    targetPort:  80
+
+

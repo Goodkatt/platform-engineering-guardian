@@ -1,0 +1,4 @@
+AWS-Infra/.terraform
+AWS-Infra/*.lock.*
+AWS-Infra/*.tfstate
+AWS-Infra/*.tfstate.*
