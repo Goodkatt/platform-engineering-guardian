@@ -146,10 +146,13 @@ eksctl create iamserviceaccount \
 <img width="1470" alt="Ekran Resmi 2024-09-08 21 52 37" src="https://github.com/user-attachments/assets/06bba943-67cc-4f6e-8277-d5cdff4bef86">
 
 # ArgoCD UI
-![Ekran Resmi 2024-09-09 12 08 17](https://github.com/user-attachments/assets/bd8cc315-7e7b-483b-97fa-dbe00d0fc774)
+![Ekran Resmi 2024-09-09 17 28 43](https://github.com/user-attachments/assets/a4b58baf-920b-438a-ba1d-0847d6abf5ef)
+
 
 # ArgoCD Application installed with manifests inside CodeCommit Repo. Horizontal Pod Autoscaler with hpa manifest file
-![Ekran Resmi 2024-09-09 17 22 23](https://github.com/user-attachments/assets/6addcde9-0717-4e3e-8f31-b135095e7681)
+![Ekran Resmi 2024-09-09 17 30 23](https://github.com/user-attachments/assets/60bf4960-13da-4712-9af8-71f1c489568d)
+
+
 
 # Container Insights
 ![Ekran Resmi 2024-09-09 14 40 51](https://github.com/user-attachments/assets/1db015ea-138e-4749-ac4a-2fa0d8e780dd)
