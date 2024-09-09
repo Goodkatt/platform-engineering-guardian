@@ -133,4 +133,58 @@ eksctl create iamserviceaccount \
 ####         SNS Topic, Subscription to topic, and Custom Metric alarm by giving the dimensions is created in sns.tf file. And received the email successfully. 
 
 # Screenshots
+## Secret retrieved from SecretsManager inside the container
+![Ekran Resmi 2024-09-09 10 45 37](https://github.com/user-attachments/assets/048e3fe9-95d3-4766-87c0-1f10869f5566)
+
+## Post Microservice Result
+<img width="1313" alt="Ekran Resmi 2024-09-08 22 13 46" src="https://github.com/user-attachments/assets/2a2ae298-ce90-41e5-836e-4d82fd1291e4">
+
+# Get Microservice Result
+<img width="1666" alt="Ekran Resmi 2024-09-08 22 15 44" src="https://github.com/user-attachments/assets/1a3c0834-5598-474c-9deb-e330e74e8f40">
+
+# Horizontal Pod Autoscaler
+<img width="1470" alt="Ekran Resmi 2024-09-08 21 52 37" src="https://github.com/user-attachments/assets/06bba943-67cc-4f6e-8277-d5cdff4bef86">
+
+# ArgoCD UI
+![Ekran Resmi 2024-09-09 12 08 17](https://github.com/user-attachments/assets/bd8cc315-7e7b-483b-97fa-dbe00d0fc774)
+
+# ArgoCD Application installed with manifests inside CodeCommit Repo. Horizontal Pod Autoscaler with hpa manifest file
+![Ekran Resmi 2024-09-09 17 22 23](https://github.com/user-attachments/assets/6addcde9-0717-4e3e-8f31-b135095e7681)
+
+# Container Insights
+![Ekran Resmi 2024-09-09 14 40 51](https://github.com/user-attachments/assets/1db015ea-138e-4749-ac4a-2fa0d8e780dd)
+![Ekran Resmi 2024-09-09 14 41 13](https://github.com/user-attachments/assets/bbf06e78-372d-4e24-8f76-cdd43a96acf8)
+
+# Cloudwatch Alarm with given Dimensions and its also appearing in cluster overview
+![Ekran Resmi 2024-09-09 15 26 48](https://github.com/user-attachments/assets/fcca61e4-6b9d-4e05-9abe-34da8538ab02)
+![Ekran Resmi 2024-09-09 15 27 41](https://github.com/user-attachments/assets/986ba592-c844-4df1-979a-7c21fc9fb144)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
